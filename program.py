@@ -117,7 +117,7 @@ def calcMACD(df: pd.DataFrame, ema_short: int, ema_long: int, ema_signal: int, s
             macd_df['deal'].iloc[i] = 'buy'
             
     if save:
-        df.to_csv(f"{symbol}_{interval}_MACD_df.csv")
+        macd_df.to_csv(f"{symbol}_{interval}_MACD_df.csv")
         
     return macd_df
 
